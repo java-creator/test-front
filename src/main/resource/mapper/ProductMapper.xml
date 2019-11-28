@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC  
+    "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+   
+<mapper namespace="com.fh.api.product.mapper.ProductMapper">
+
+	<update id="updateStuck">
+		update zzz_pro set stuck = stuck - #{count} where id = #{productId} and stuck - #{count} > 0
+	</update>
+
+
+	<!--查询热销-->
+	<select id="querySales" resultType="product">
+		select * from zzz_pro where sales>=3
+	</select>
+</mapper>

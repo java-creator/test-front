@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC  
+    "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+   
+<mapper namespace="com.fh.api.category.mapper.CategoryMapper">
+ <select id="queryListByPid" resultType="category" parameterType="int">
+	 select * from t_category where pid=#{pid}
+ </select>
+
+    <select id="queryList" resultType="category" >
+		select * FROM  t_category
+	</select>
+
+
+</mapper>
